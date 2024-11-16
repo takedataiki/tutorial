@@ -31,32 +31,35 @@
         </ul>
     </div> -->
 
-    <section class="section">
-        <div class="column is-6 is-offset-3">
-            <form class="field is-grouped" action="/" method="post">
-                <p class="control is-expanded">
-                <input class="input" type="text" name="task" placeholder="タスクを入力">
-                </p>
-                <p class="control">
-                <button class="button is-info">
-                    追加する
-                </button>
-                </p>
-            </form>                
-        </div>
-    </section>
+    <div class="vw-100 vh-100">
+        <section class="section">
+            <div class="column is-6 is-offset-3">
+                <form class="field is-grouped" action="/" method="post">
+                    <p class="control is-expanded">
+                    <input class="input" type="text" name="task" placeholder="タスクを入力">
+                    </p>
+                    <p class="control">
+                    <button class="button is-info">
+                        追加する
+                    </button>
+                    </p>
+                </form>                
+            </div>
+        </section>
 
-    <div class="container">
-        <ul class="mt-4 list-group">
-            {% for task in tasks %}
-            <li class="list-group-item d-flex align-items-center">
-                <div class="fw-bold ps-3">{{ task.task }}</div>
-                <button class="btn btn-outline-primary ms-auto">編集</button>
-                <a href="/delete/{{ task.id }}" class="btn btn-outline-danger mx-3">削除</a>
-            </li>
-            {% endfor %}
-        </ul>        
+        <div class="container">
+            <ul class="mt-4 list-group">
+                {% for task in tasks %}
+                <li class="list-group-item d-flex align-items-center">
+                    <div class="fw-bold ps-3">{{ task.task }}</div>
+                    <button class="btn btn-outline-primary ms-auto">編集</button>
+                    <a href="/delete/{{ task.id }}" class="btn btn-outline-danger mx-3">削除</a>
+                </li>
+                {% endfor %}
+            </ul>        
+        </div>        
     </div>
+
 
 
     <!-- <div class="container">
